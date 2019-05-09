@@ -24,7 +24,7 @@ print("Chemistry       :    "  + str(Chemistry) + "     " +   str(100) )
 print("Biology         :    "  + str(Biology)  + "     " +  str(100)  )
 print("Pak-Studies     :    "  + str(Pak_Studies) + "     " +  str(100) )
 print("_________________________________")
-print("Marks Obtained  :  " +  str(Marks_Obtained) + " out of " + str(500))
+print("Marks Obtained  :  " +  str(Marks_Obtained) + " out of " + str(Total_Marks))
 print("Percentage      :  " +  str(Percentage) + " %")
 
 
