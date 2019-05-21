@@ -16,9 +16,9 @@ def div(x,y) :
 print("\n")
 print ("Select opertion to perform \n")
 print ("Press '1' for Addittion")
-print ("Press '2' for Subtract")
-print ("Press '3' for Multiply")
-print ("Press '4' for Divide \n")
+print ("Press '2' for Subtraction")
+print ("Press '3' for Multiplication")
+print ("Press '4' for Dividion \n")
 
 choice = int(input("Enter choice for action to perform (1/2/3/4) : "))
 
