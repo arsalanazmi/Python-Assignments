@@ -47,7 +47,7 @@ for rows in range (0,n):
     for cols in range (0,k):
         print(end=" ")
     k=k-2
-    for j in range(0,rows+1):
+    for cols in range(0,rows+1):
         print("*",end=" ")
     print("\r")
 print("___________________________\n")
@@ -71,7 +71,7 @@ for rows in reversed(range (0,n)):
     for cols in range (0,k):
         print(end=" ")
     k=k+2
-    for j in range(0,rows+1):
+    for cols in range(0,rows+1):
         print("*",end=" ")
     print("\r")
 print("___________________________\n")
@@ -95,7 +95,7 @@ for rows in range (0,n):
     for cols in range (0,k):
         print(end=" ")
     k=k-1
-    for j in range(0,rows+1):
+    for cols in range(0,rows+1):
         print("*",end=" ")
     print("\r")
 print("___________________________\n")
@@ -119,7 +119,7 @@ for rows in reversed(range (0,n)):
     for cols in range (0,k):
         print(end=" ")
     k=k+1
-    for j in range(0,rows+1):
+    for cols in range(0,rows+1):
         print("*",end=" ")
     print("\r")
 print("___________________________\n")
