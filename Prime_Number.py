@@ -22,5 +22,3 @@ if number > 1 :
 # If entered no. is less than or equal to 1 then it is not a prime no.
 else :
     print("\n", number, "is not a prime number.")
-
-
