@@ -1,5 +1,7 @@
 Students = []
 while True:
+    print("\n" + "Student Management System" + "\n")
+    print("MAIN MENU"+"\n")
     print('Press 1 to Add Student')
     print('Press 2 to Edit Student')
     print('Press 3 to Search Student')
@@ -10,6 +12,7 @@ while True:
     choice = int(input("Enter Choice 1-6: "))
 
     if choice == 1:
+        print("Students Addition Menu")
         Student = {}
         Student['Name'] = input('Enter Student Name: ')
         Student['Age'] = int(input('Enter Student Age: '))
@@ -19,6 +22,7 @@ while True:
         print(Students)
     
     if choice == 2:
+        print("Students Edit Menu")
         check = input("Enter Student's Name: ")
         for i in range (len(Students)):
             if Students[i]['Name'] == check:
@@ -31,6 +35,7 @@ while True:
                         break
             
     if choice == 3:
+        print("Student's Seraching Menu")
         Search = input("Enter Student's Name to be Searched: ")
         for i in range (len(Students)):
             if Students[i]['Name'] == Search:
@@ -38,6 +43,7 @@ while True:
                 break
 
     if choice == 4:
+        print("Student's Deletion Menu")
         Delete = input("Enter Student's Name to be Deleted: ")
         for i in range (len(Students)):
             if Students[i]['Name'] == Delete:
@@ -47,7 +53,10 @@ while True:
         print ("List after deletion of dictionary : " +  str(Students))
     
     if choice == 5:
+        print("Student's Display Menu")
         print(Students)
 
     if choice == 6:
+        print("Thanks For Using Student Management System ")
+        print("Good Bye")
         break
