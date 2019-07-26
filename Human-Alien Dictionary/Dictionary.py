@@ -14,6 +14,5 @@ Alien_Dictionary = {
     "Sosu" : "Salam"
 }
 def write_to_json():
-    with open("Alien_Dict.json","w") as f:
+    with open("Alien_Dictionary.json","w") as f:
         json.dump(Alien_Dictionary, f)
-write_to_json()
