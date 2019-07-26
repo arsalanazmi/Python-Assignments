@@ -17,7 +17,7 @@ while True:
     choice = int(input("Enter your Choice [1/9]: "))
 
     try:
-        with open("Alien_Dict.json") as f:
+        with open("Alien_Dictionary.json") as f:
             dictionary = json.load(f)
 
         if choice == 1:
@@ -30,11 +30,11 @@ while True:
                     break
             else:
                 print('Word "' + alien + '" not found in Alien Dictionary \n')
-                
+                    
         elif choice == 2:
             print("\nHuman (English) To Alien Dictionary \n")
             English = input("Enter any word of Human (English) language: ")
-           
+            
             for k,v in dictionary.items():
                 if English.title() == v:
                     print("Human (English) Phrase =",v,"\nAlien Translation =",k,"\n")
@@ -59,7 +59,7 @@ while True:
             alien = alien.title() 
             Dictionary.Alien_Dictionary.update({human:alien})
             Dictionary.write_to_json()
-            
+                
         elif choice == 5:
             alien = input("\nEnter Alien language word whose meaning you want to edit: ")
             for k,v in dictionary.items():
@@ -69,6 +69,7 @@ while True:
                     alien = alien.title()
                     Dictionary.Alien_Dictionary.update({alien:human})
                     Dictionary.write_to_json()
+                    break
             else:
                 print("Word '" + alien + "' doesn't exist in Alien to Human (English) Dictionary")       
 
@@ -79,15 +80,17 @@ while True:
                     alien = input("Edit Meaning: ")
                     alien = alien.title()
                     human = human.title()
+                    del Dictionary.Alien_Dictionary[k]
                     Dictionary.Alien_Dictionary.update({alien:human})
                     Dictionary.write_to_json()
+                    break
             else:
-                print("Word '" + human + "' doesn't exist in Human (English) to Alien Dictionary")    
+                print("Word '" + human + "' doesn't exist in Human (English) to Alien Dictionary") 
 
         elif choice == 7:
             print("\nDisaplay Alien To Human (English) Dictionary\n")
             print("Alien\t\t:\tEnglish")
-        
+            
             x = ' '
             space = 0
             for k,v in dictionary.items():
@@ -111,7 +114,7 @@ while True:
         elif choice == 9:
             print("\nDo you really want to Exit ?")
             exit = input("Press [Y] for Yes [N] for No: ")
-                
+
             if exit.lower() == 'y':
                 print("Thanks for using Human/Alien Dictionary")
                 print("Good Bye")
@@ -132,5 +135,6 @@ while True:
                 break  
 
     except FileNotFoundError:
-        print("Sorry, File Not Found !")
-        print("Try Again !")
+        print("\nSorry, File Not Found !")
+        Dictionary.write_to_json()
+        print("New Dictionary Created!\nTry Again !")
